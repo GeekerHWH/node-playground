@@ -23,8 +23,7 @@ export default class ListNode {
     return dummy.next
   }
 
-  toArray(): number[]{
-    let ptr: ListNode = this
+  static toArray(ptr: ListNode | null): number[]{
     if (ptr === null) {
       return []
     }

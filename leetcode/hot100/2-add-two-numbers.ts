@@ -31,19 +31,19 @@ export default function testAll(): void {
     // let l1 = new ListNode(2, new ListNode(4, new ListNode(3)))
     let l2 = ListNode.FromArray([5,6,4])
     // let l2 = new ListNode(5, new ListNode(6, new ListNode(4)))
-    let res = addTwoNumbers(l1, l2)?.toArray()
+    let res = ListNode.toArray(addTwoNumbers(l1, l2))
     assert.deepStrictEqual(res, [7,0,8], 'should be [7,0,8], but get '+ JSON.stringify(res))
   })
   test('Case 2', t => {
     let l1 = new ListNode(0)
     let l2 = new ListNode(0)
-    let res = addTwoNumbers(l1, l2)?.toArray()
+    let res = ListNode.toArray(addTwoNumbers(l1, l2))
     assert.deepStrictEqual(res, [0], 'should be [0], but get '+ JSON.stringify(res))
   })
   test('Case 3', t => {
     let l1 = ListNode.FromArray([9,9,9,9,9,9,9])
     let l2 = ListNode.FromArray([9,9,9,9])
-    let res = addTwoNumbers(l1, l2)?.toArray()
+    let res = ListNode.toArray(addTwoNumbers(l1, l2))
     assert.deepStrictEqual(res, [8,9,9,9,0,0,0,1], 'should be [8,9,9,9,0,0,0,1], but get '+ JSON.stringify(res))
   })
 }
