@@ -1,2 +1,2 @@
-import testAll from "./leetcode/hot100/94-binary-tree-inorder-traversal.ts";
+import testAll from "./leetcode/basic/704-binary-search.ts";
 testAll()
