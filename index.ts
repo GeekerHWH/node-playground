@@ -1,2 +1,2 @@
-import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
+import testAll from "./leetcode/hot100/1-two-sum.ts";
 testAll()
