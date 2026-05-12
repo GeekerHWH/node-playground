@@ -1,2 +1,2 @@
-import testAll from "./leetcode/hot100/283-move-zeroes.ts";
+import testAll from "./leetcode/hot100/35-search-insert-position.ts";
 testAll()
