@@ -1,2 +1,2 @@
-import testAll from "./leetcode/hot100/34-find-first-and-last-position-of-element-in-sorted-array.ts";
+import testAll from "./658-find-k-closest-elements.ts";
 testAll()
