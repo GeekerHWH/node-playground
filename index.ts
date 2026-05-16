@@ -1,2 +1,2 @@
-import testAll from "./658-find-k-closest-elements.ts";
+import testAll from "./leetcode/hot100/136-single-number.ts";
 testAll()
