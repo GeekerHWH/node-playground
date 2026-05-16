@@ -38,3 +38,5 @@ export default class ListNode {
     return res
   }
 }
+
+// TODO: build binary search tree using (sorted) array from root to leaf
