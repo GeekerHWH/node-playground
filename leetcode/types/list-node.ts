@@ -8,6 +8,11 @@ export default class ListNode {
   }
 
   static FromArray(array: number[]): ListNode | null{
+    let [head, _] = ListNode.FromArrayWithTail(array)
+    return head
+  }
+
+  static FromArrayWithTail(array: number[]): Array<ListNode|null>{
     let dummy = new ListNode(0)
     let tail = dummy.next
     for (let elem of array) {
@@ -20,7 +25,7 @@ export default class ListNode {
         tail = tail.next
       }
     }
-    return dummy.next
+    return [dummy.next, tail]
   }
 
   static toArray(ptr: ListNode | null): number[]{
