@@ -9,6 +9,35 @@ export default class TreeNode {
       this.right = (right===undefined ? null : right)
   }
 
+  BFS(): Array<number|null>{
+    if (this === null) {
+      return []
+    }
+    const ans: Array<number|null> = []
+    let q: Array<TreeNode|null> = [this]
+    while (q.length !== 0) {
+      let nextQ: Array<TreeNode|null> = []
+      while (q.length !== 0) {
+        let node = q.splice(0,1)[0]
+        if (node !== null) {
+          ans.push(node.val)
+        } else {
+          ans.push(null)
+        }
+
+        if (node !== null) {
+          if (node.left === null && node.right === null) {
+            continue
+          }
+          nextQ.push(node.left)
+          nextQ.push(node.right)
+        }
+      }
+      q = nextQ
+    }
+    return ans
+  }
+
   static inorderTraversal(root: TreeNode | null): number[] {
     if (root === null) {
       return []
@@ -59,4 +88,16 @@ export default class TreeNode {
     }
     return root
   }
+
+  // refer to 108-convert-sorted-array-to-binary-search-tree.ts
+  static sortedArrayToBST(nums: number[]): TreeNode | null {
+    if (nums.length === 0) {
+      return null
+    }
+    let mid = (nums.length - 1) >> 1
+    let root = new TreeNode(nums[mid])
+    root.left = this.sortedArrayToBST(nums.slice(0, mid))
+    root.right = this.sortedArrayToBST(nums.slice(mid + 1, nums.length))
+    return root
+  };
 }
