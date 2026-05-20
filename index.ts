@@ -1,7 +1,7 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-import testAll from "./leetcode/hot100/215-kth-largest-element-in-an-array.ts";
+import testAll from "./leetcode/hot100/55-jump-game.ts";
 testAll()
 
 // import TreeNode from "./leetcode/types/binary-tree-node.ts";
