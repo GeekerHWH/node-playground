@@ -1,11 +1,11 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-// import testAll from "./leetcode/hot100/55-jump-game.ts";
-// testAll()
-
-import testAll from "./knapsack-problem.ts";
+import testAll from "./leetcode/hot100/416-partition-equal-subset-sum.ts";
 testAll()
+
+// import testAll from "./knapsack-problem.ts";
+// testAll()
 
 // import TreeNode from "./leetcode/types/binary-tree-node.ts";
 // let tree = TreeNode.sortedArrayToBST([1,2,3,4,5])
