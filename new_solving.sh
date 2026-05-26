@@ -17,10 +17,11 @@ function xxx() {}
 
 export default function testAll(): void {
   console.log("${replaceSpace}")
+  let toBeTestedFn = xxx
   test('Case 1', t => {
     let l1 = ListNode.FromArray([1,2,4])
     let l2 = ListNode.FromArray([1,3,4])
-    let res = ListNode.toArray(mergeTwoLists(l1, l2))
+    let res = ListNode.toArray(toBeTestedFn(l1, l2))
     assert.deepStrictEqual(res, [1,1,2,3,4,4], 'should be [1,1,2,3,4,4], but get '+ JSON.stringify(res))
   })
 }
