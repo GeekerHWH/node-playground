@@ -1,7 +1,7 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-import testAll from "./leetcode/hot100/206-reverse-linked-list.ts";
+import testAll from "./leetcode/hot100/234-palindrome-linked-list.ts";
 testAll()
 
 // import testAll from "./knapsack-problem.ts";

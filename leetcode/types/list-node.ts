@@ -7,6 +7,52 @@ export default class ListNode {
       this.next = (next===undefined ? null : next)
   }
 
+  // for even number of nodes, result will be the one smaller than just the middle
+  // for odd number of node, result will be just the middle one
+  findMiddle(): ListNode | null{
+    if (this === null) {
+      return null
+    }
+    let dummy:ListNode|null = new ListNode(0, this)
+    let pior:ListNode|null = dummy, mid:ListNode|null = dummy
+    while (pior !== null && pior!.next !== null) {
+      pior = pior.next.next
+      mid = mid!.next
+    }
+    return mid
+  }
+
+  static reverseList(head: ListNode | null): ListNode | null {
+    if (head === null) {
+      return null
+    }
+    let prev: ListNode|null = null
+    while (head !== null) {
+      let temp: ListNode|null = head.next
+      head.next = prev
+      prev = head
+      head = temp
+    }
+    return prev
+  };
+
+  static valueEqual(l1: ListNode | null, l2: ListNode | null): boolean{
+    while (l1 !== null && l2 !== null) {
+      if (l1.val !== l2.val) {
+        return false
+      }
+      l1 = l1.next
+      l2 = l2.next
+    }
+    if (l1 === null && l2 === null) {
+      return true
+    }
+    if (l1 === null || l2 === null) {
+      return false
+    }
+    return true
+  }
+
   static FromArray(array: number[]): ListNode | null{
     let [head, _] = ListNode.FromArrayWithTail(array)
     return head
