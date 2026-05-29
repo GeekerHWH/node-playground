@@ -1,7 +1,7 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-import testAll from "./leetcode/hot100/128-longest-consecutive-sequence.ts";
+import testAll from "./leetcode/hot100/49-group-anagrams.ts";
 testAll()
 
 // import testAll from "./knapsack-problem.ts";
