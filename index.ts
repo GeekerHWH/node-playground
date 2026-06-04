@@ -1,7 +1,7 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-import testAll from "./leetcode/hot100/49-group-anagrams.ts";
+import testAll from "./leetcode/hot100/70-climbing-stairs.ts";
 testAll()
 
 // import testAll from "./knapsack-problem.ts";
