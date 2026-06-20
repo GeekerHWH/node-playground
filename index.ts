@@ -1,11 +1,11 @@
 // import testAll from "./leetcode/basic/21-merge-two-sorted-lists.ts";
 // testAll()
 
-import testAll from "./leetcode/hot100/70-climbing-stairs.ts";
-testAll()
-
-// import testAll from "./knapsack-problem.ts";
+// import testAll from "./leetcode/hot100/70-climbing-stairs.ts";
 // testAll()
+
+import testAll from "./881-boats-to-save-people.ts";
+testAll()
 
 // import TreeNode from "./leetcode/types/binary-tree-node.ts";
 // let tree = TreeNode.sortedArrayToBST([1,2,3,4,5])
