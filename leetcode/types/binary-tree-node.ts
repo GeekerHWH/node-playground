@@ -38,6 +38,23 @@ export default class TreeNode {
     return ans
   }
 
+  // return the maximum depth of a binary tree, coresponding to 104. Maximum Depth of Binary Tree
+  // https://leetcode.cn/problems/maximum-depth-of-binary-tree
+  static maxDepth(root: TreeNode | null): number{
+    let res = 0
+    const dfs = (root: TreeNode | null, depth: number) => {
+      if (root === null) {
+        res = Math.max(res, depth)
+        return
+      }
+      depth++
+      dfs(root.left, depth)
+      dfs(root.right, depth)
+    }
+    dfs(root, 0)
+    return res
+  }
+
   static inorderTraversal(root: TreeNode | null): number[] {
     if (root === null) {
       return []
